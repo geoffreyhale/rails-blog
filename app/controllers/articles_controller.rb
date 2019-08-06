@@ -13,6 +13,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def create
     @article = Article.new(article_params)
 
@@ -20,6 +24,16 @@ class ArticlesController < ApplicationController
       redirect_to @article
     else
       render 'new' # render is done within the same request as the form submission whereas redirect_to will tell the browser to issue another request
+    end
+  end
+
+  def update
+    @article = Article.find(params[:id])
+
+    if @article.update(article_params)
+      redirect_to @article
+    else
+      render 'edit'
     end
   end
 
