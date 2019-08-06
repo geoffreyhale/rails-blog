@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To start a web server on your development machine:
 
-Things you may want to cover:
+```
+bin/rails server
+```
 
-* Ruby version
+This will fire up Puma, a web server distributed with Rails by default.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To see your application in action, open a browser window and navigate to http://localhost:3000.  You should see the Rails default information page.  The "Welcome aboard" page is the _smoke test_ for a new Rails application: it makes sure that you have your software configured correctly enough to serve a page.
